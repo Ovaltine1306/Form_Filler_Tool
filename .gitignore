@@ -1,0 +1,17 @@
+build/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+compile_commands.json
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.suo
+*.user
+.vscode/
+Thumbs.db
+.DS_Store
