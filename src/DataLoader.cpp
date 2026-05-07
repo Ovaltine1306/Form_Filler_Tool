@@ -1,4 +1,5 @@
 #include "../include/DataLoader.h"
+#include "../include/Encoding.h"
 #include <iostream>
 #include <fstream>
 
@@ -17,8 +18,8 @@ vector<Student> readCSV(const string& filePath) {
     while(getline(data_file, line)){
         size_t commaPos = line.find(',');
         Student s;
-        s.name = line.substr(0, commaPos);
-        s.mssv = line.substr(commaPos + 2);
+        s.name = encodingData(line.substr(0, commaPos));
+        s.mssv = encodingData(line.substr(commaPos + 2));
         result.push_back(s);
     }
     data_file.close();
